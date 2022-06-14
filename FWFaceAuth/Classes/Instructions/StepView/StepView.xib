@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="StepView" customModule="FWFaceAuth" customModuleProvider="target">
+            <connections>
+                <outlet property="stepIconImageView" destination="DjV-uU-Ext" id="zir-Jp-ORH"/>
+                <outlet property="stepLabel" destination="LaA-9a-veL" id="D96-UV-9dl"/>
+                <outlet property="stepNumberLabel" destination="7hW-4o-0ev" id="J92-ar-Zah"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" interfaceStyle="light" id="HwY-gr-5Wu" userLabel="Step View">
+            <rect key="frame" x="0.0" y="0.0" width="294" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DjV-uU-Ext" userLabel="Step Icon">
+                    <rect key="frame" x="0.0" y="0.0" width="57" height="57"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="DjV-uU-Ext" secondAttribute="height" multiplier="1:1" id="AoI-QH-gd0"/>
+                        <constraint firstAttribute="width" constant="57" id="qcJ-bT-RR2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hW-4o-0ev" userLabel="Step Number">
+                    <rect key="frame" x="70" y="3" width="224" height="14"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14" id="yLh-lx-Rs1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
+                    <color key="textColor" name="ProfuturoCerulean"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaA-9a-veL" userLabel="Step Label">
+                    <rect key="frame" x="70" y="20" width="224" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="RKv-m1-j8L"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="14"/>
+                    <color key="textColor" name="ProfuturoCharcoalGrey"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="eF7-Yd-wt3" firstAttribute="trailing" secondItem="7hW-4o-0ev" secondAttribute="trailing" id="6Ax-r3-mWs"/>
+                <constraint firstAttribute="top" secondItem="DjV-uU-Ext" secondAttribute="top" id="GfM-VQ-YDl"/>
+                <constraint firstItem="DjV-uU-Ext" firstAttribute="leading" secondItem="eF7-Yd-wt3" secondAttribute="leading" id="LjK-KQ-fqs"/>
+                <constraint firstItem="LaA-9a-veL" firstAttribute="top" secondItem="7hW-4o-0ev" secondAttribute="bottom" constant="3" id="OQm-7E-BaA"/>
+                <constraint firstItem="LaA-9a-veL" firstAttribute="trailing" secondItem="7hW-4o-0ev" secondAttribute="trailing" id="PK4-Kc-VYe"/>
+                <constraint firstAttribute="top" secondItem="7hW-4o-0ev" secondAttribute="top" constant="-3" id="QG8-Hu-MUl"/>
+                <constraint firstItem="7hW-4o-0ev" firstAttribute="leading" secondItem="LaA-9a-veL" secondAttribute="leading" id="fNT-wZ-pCE"/>
+                <constraint firstItem="7hW-4o-0ev" firstAttribute="leading" secondItem="DjV-uU-Ext" secondAttribute="trailing" constant="13" id="rS9-LH-OAU"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="eF7-Yd-wt3"/>
+            <point key="canvasLocation" x="-239" y="-89"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ProfuturoCerulean">
+            <color red="0.0040000001899898052" green="0.50599998235702515" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ProfuturoCharcoalGrey">
+            <color red="0.21568627450980393" green="0.25098039215686274" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InstructionsViewController" customModule="FWFaceAuth" customModuleProvider="target">
+            <connections>
+                <outlet property="continueButton" destination="LKH-CQ-ta9" id="moD-nh-Wey"/>
+                <outlet property="firstStepView" destination="EYg-Vo-cGl" id="PRP-4g-vL4"/>
+                <outlet property="secondStepView" destination="soi-Vd-Urm" id="cSC-1d-0hj"/>
+                <outlet property="thirdStepView" destination="J3z-ch-XS0" id="9p2-1z-Y1n"/>
+                <outlet property="view" destination="iN0-l3-epB" id="2MF-7T-uYl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mlP-13-oc8" userLabel="Top Label">
+                    <rect key="frame" x="32" y="104" width="350" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="XOV-kF-mbS"/>
+                    </constraints>
+                    <string key="text">Estás a pocos pasos de
+concluir con tu solicitud</string>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                    <color key="textColor" name="ProfuturoDarkishBlue"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Dhn-J7-mRE" userLabel="Steps">
+                    <rect key="frame" x="78.5" y="238" width="257" height="210"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EYg-Vo-cGl" userLabel="First Step" customClass="StepView" customModule="FWFaceAuth" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="257" height="70"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="Qst-4m-hEb"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="soi-Vd-Urm" userLabel="Second Step" customClass="StepView" customModule="FWFaceAuth" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="70" width="257" height="70"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J3z-ch-XS0" userLabel="Third Step" customClass="StepView" customModule="FWFaceAuth" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="140" width="257" height="70"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="soi-Vd-Urm" firstAttribute="height" secondItem="J3z-ch-XS0" secondAttribute="height" id="ZtO-oi-SSD"/>
+                        <constraint firstAttribute="height" constant="210" id="rC6-4F-6Va"/>
+                        <constraint firstItem="EYg-Vo-cGl" firstAttribute="height" secondItem="soi-Vd-Urm" secondAttribute="height" id="vUU-qx-kVC"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LKH-CQ-ta9">
+                    <rect key="frame" x="78.5" y="558" width="257" height="45"/>
+                    <color key="backgroundColor" red="0.0" green="0.29411764709999999" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="257" id="ZTF-nQ-2Be"/>
+                        <constraint firstAttribute="height" constant="45" id="pQ7-Hw-cXl"/>
+                        <constraint firstAttribute="width" secondItem="LKH-CQ-ta9" secondAttribute="height" multiplier="257:45" id="xxP-Ed-6eC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                    <state key="normal" title="Continuar"/>
+                    <connections>
+                        <action selector="continueButtonTap:" destination="-1" eventType="touchUpInside" id="a2n-Vn-eYD"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mlP-13-oc8" secondAttribute="trailing" constant="32" id="7I2-OD-L9f"/>
+                <constraint firstItem="LKH-CQ-ta9" firstAttribute="top" secondItem="Dhn-J7-mRE" secondAttribute="bottom" constant="110" id="8Vj-3o-xnB"/>
+                <constraint firstItem="Dhn-J7-mRE" firstAttribute="top" secondItem="mlP-13-oc8" secondAttribute="bottom" constant="70" id="9QI-I6-8SB"/>
+                <constraint firstItem="LKH-CQ-ta9" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="FlV-Lb-dgU"/>
+                <constraint firstItem="Dhn-J7-mRE" firstAttribute="trailing" secondItem="LKH-CQ-ta9" secondAttribute="trailing" id="FxF-T1-Bml"/>
+                <constraint firstItem="mlP-13-oc8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="60" id="gnk-e4-X3k"/>
+                <constraint firstItem="mlP-13-oc8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="32" id="quR-k9-bqv"/>
+                <constraint firstItem="Dhn-J7-mRE" firstAttribute="leading" secondItem="LKH-CQ-ta9" secondAttribute="leading" id="vF8-G4-aDI"/>
+                <constraint firstItem="Dhn-J7-mRE" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="wvc-XF-w91"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ProfuturoDarkishBlue">
+            <color red="0.0" green="0.29399999976158142" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

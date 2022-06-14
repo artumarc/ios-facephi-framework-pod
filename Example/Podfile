@@ -1,0 +1,49 @@
+platform :ios, '13.0'
+use_frameworks!
+source 'https://github.com/grupo-profuturo/ios-clientes-pod-spec.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'FWFaceAuth_Example' do
+
+  pod 'FWFaceAuth', :path => '../'
+
+  pod 'Firebase/Messaging'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Core'
+  pod 'Fabric', '~> 1.10.2'
+  pod 'Crashlytics', '~> 3.14.0'
+  pod 'Microblink', '1.5.0'
+  pod 'FPhiSelphIDWidgetiOS', '1.5.0'
+  pod 'ZipZap', '1.5.0'
+
+  target 'FWFaceAuth_Tests' do
+    inherit! :search_paths
+   end
+
+
+end
+
+post_install do |installer|
+    	installer.pods_project.targets.each do |target|
+        	target.build_configurations.each do |config|
+            		config.build_settings['GCC_WARN_INHIBIT_ALL_WARNINGS'] = "YES"
+			if config.name == 'Qa'
+				config.build_settings["ONLY_ACTIVE_ARCH"] ||= 'YES'
+          			config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] ||= ['$(inherited)', "QA"]
+				config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['$(inherited)', "-D QA"]
+			end
+			if config.name == 'Debug'
+				config.build_settings["ONLY_ACTIVE_ARCH"] ||= 'YES'
+          			config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] ||= ['$(inherited)', "DEBUG"]
+				config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['$(inherited)', "-D DEBUG"]
+
+       			end
+			if config.name == 'Release'
+				config.build_settings["ONLY_ACTIVE_ARCH"] ||= 'NO'
+         			config.build_settings['SWIFT_ACTIVE_COMPILATION_CONDITIONS'] ||= ['$(inherited)', "RELEASE"]
+				config.build_settings['OTHER_SWIFT_FLAGS'] ||= ['$(inherited)', "-D RELEASE"]
+
+        		end
+        	end
+    	end
+end

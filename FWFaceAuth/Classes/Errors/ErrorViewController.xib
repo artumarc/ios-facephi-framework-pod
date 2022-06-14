@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ErrorViewController" customModule="FWFaceAuth" customModuleProvider="target">
+            <connections>
+                <outlet property="errorLabel" destination="ora-I4-1AT" id="gP6-WK-qy6"/>
+                <outlet property="tryAgainButton" destination="xnx-3d-0lc" id="wOe-JD-tIB"/>
+                <outlet property="view" destination="iN0-l3-epB" id="rT9-20-ZeL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_error" translatesAutoresizingMaskIntoConstraints="NO" id="Chb-3J-aZ6">
+                    <rect key="frame" x="170.5" y="223" width="73" height="73"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Chb-3J-aZ6" secondAttribute="height" multiplier="1:1" id="Hkm-O5-X9n"/>
+                        <constraint firstAttribute="width" constant="73" id="i5G-GL-526"/>
+                        <constraint firstAttribute="height" constant="73" id="zjS-26-qwC"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ora-I4-1AT">
+                    <rect key="frame" x="91.5" y="343" width="231" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="9hd-ne-aGp"/>
+                        <constraint firstAttribute="width" constant="231" id="Lh3-gc-JCA"/>
+                    </constraints>
+                    <string key="text">No logramos comprobar
+tu identidad</string>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                    <color key="textColor" name="ProfuturoCerulean"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ba-18-Ueb">
+                    <rect key="frame" x="343" y="52" width="63" height="63"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="63" id="7dZ-Nv-3Of"/>
+                        <constraint firstAttribute="height" constant="63" id="vaK-Sk-ulO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                    <color key="tintColor" name="ProfuturoCerulean"/>
+                    <state key="normal" image="multiply" catalog="system">
+                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="35" scale="large" weight="medium"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissButtonTap:" destination="-1" eventType="touchUpInside" id="Dft-Jc-uDm"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xnx-3d-0lc">
+                    <rect key="frame" x="79" y="618" width="256" height="44"/>
+                    <color key="backgroundColor" name="ProfuturoDarkishBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="FmC-0Q-Xd3"/>
+                        <constraint firstAttribute="width" constant="256" id="wC6-kj-hmi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                    <state key="normal" title="Inténtalo nuevamente">
+                        <color key="titleColor" name="ProfuturoWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="dismissButtonTap:" destination="-1" eventType="touchUpInside" id="kcf-Zp-H5G"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="xnx-3d-0lc" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="DAU-ik-qkL"/>
+                <constraint firstItem="ora-I4-1AT" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="F2x-oN-Ylw"/>
+                <constraint firstItem="Chb-3J-aZ6" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="179" id="KUC-fe-Tq3"/>
+                <constraint firstItem="xnx-3d-0lc" firstAttribute="top" secondItem="ora-I4-1AT" secondAttribute="bottom" constant="227" id="OoR-yo-SQc"/>
+                <constraint firstItem="ora-I4-1AT" firstAttribute="top" secondItem="Chb-3J-aZ6" secondAttribute="bottom" constant="47" id="dVI-gI-dqq"/>
+                <constraint firstItem="Chb-3J-aZ6" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="m3V-Nq-kIV"/>
+                <constraint firstItem="2ba-18-Ueb" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="8" id="tlu-Il-s89"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2ba-18-Ueb" secondAttribute="trailing" constant="8" id="ws9-6u-i8i"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="140.57971014492756" y="123.88392857142857"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icn_error" width="106.5" height="108"/>
+        <image name="multiply" catalog="system" width="64" height="54"/>
+        <namedColor name="ProfuturoCerulean">
+            <color red="0.0040000001899898052" green="0.50599998235702515" blue="0.76899999380111694" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ProfuturoDarkishBlue">
+            <color red="0.0" green="0.29399999976158142" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ProfuturoWhite">
+            <color red="0.96100002527236938" green="0.9649999737739563" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

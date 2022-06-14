@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0oh-c8-OnY">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="cUa-nB-Zh6">
+            <objects>
+                <viewController id="kzV-n0-x52" customClass="ViewController" customModule="FWFaceAuth_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wxV-Ji-PoI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hm6-qq-hU5">
+                                <rect key="frame" x="75" y="287" width="225" height="137"/>
+                                <color key="backgroundColor" name="ProfuturoDarkishBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="137" id="Bs4-Lr-t8L"/>
+                                    <constraint firstAttribute="width" constant="225" id="Cfl-Y4-StX"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" name="ProfuturoWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="button:" destination="kzV-n0-x52" eventType="touchUpInside" id="Gwd-rp-wAP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hm6-qq-hU5" firstAttribute="centerY" secondItem="IkY-en-zti" secondAttribute="centerY" id="nII-DK-UDE"/>
+                            <constraint firstItem="hm6-qq-hU5" firstAttribute="centerX" secondItem="IkY-en-zti" secondAttribute="centerX" id="p7c-GI-ryD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="IkY-en-zti"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GSM-1D-m9J"/>
+                    <connections>
+                        <segue destination="0Q0-Nl-kNv" kind="show" identifier="homeRetiroSegue" id="rvV-yW-Vat"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GUp-Zi-0be" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="138.61607142857142"/>
+        </scene>
+        <!--HomeRetiro-->
+        <scene sceneID="rDL-4a-2j6">
+            <objects>
+                <viewController id="0Q0-Nl-kNv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q5H-Lr-6zi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="VwJ-eo-9aS"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="HomeRetiro" id="jd4-fg-XF4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saR-0G-nJF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1921" y="132"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jc6-SR-K9e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0oh-c8-OnY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SIJ-d0-poD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="kzV-n0-x52" kind="relationship" relationship="rootViewController" id="TPG-EB-czT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eAt-km-vTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="ProfuturoDarkishBlue">
+            <color red="0.0" green="0.29399999976158142" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="ProfuturoWhite">
+            <color red="0.96100002527236938" green="0.9649999737739563" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

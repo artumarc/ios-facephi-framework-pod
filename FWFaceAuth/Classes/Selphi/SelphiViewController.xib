@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelphiViewController" customModule="FWFaceAuth">
+            <connections>
+                <outlet property="checkMarkImageView" destination="A5a-GO-nYd" id="ftp-ZL-LYU"/>
+                <outlet property="continueButton" destination="te3-bf-blB" id="bju-Pa-YUf"/>
+                <outlet property="imageViewConstraint" destination="oyH-51-odu" id="ddW-gf-Ycl"/>
+                <outlet property="portraitView" destination="z6R-To-AKs" id="JVy-Cm-awI"/>
+                <outlet property="titleLabel" destination="C9D-sJ-9rA" id="dkI-3i-cSO"/>
+                <outlet property="tryAgainButton" destination="56H-2s-S1p" id="AWt-nq-g58"/>
+                <outlet property="userPhotoImageView" destination="how-MS-pTX" id="9py-F8-pYY"/>
+                <outlet property="view" destination="RoT-k4-xOV" id="gRc-2I-UgW"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="RoT-k4-xOV">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tómate una &quot;selfie&quot;" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9D-sJ-9rA">
+                    <rect key="frame" x="32.5" y="64" width="310" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="310" id="Dd4-xE-zH0"/>
+                        <constraint firstAttribute="height" constant="48" id="pSA-vp-iz7"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
+                    <color key="textColor" red="0.0" green="0.29411764709999999" blue="0.55294117649999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6R-To-AKs">
+                    <rect key="frame" x="97.5" y="182" width="180" height="226"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icn_selfie" translatesAutoresizingMaskIntoConstraints="NO" id="how-MS-pTX">
+                            <rect key="frame" x="-23" y="0.0" width="226" height="226"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="how-MS-pTX" secondAttribute="height" multiplier="1:1" id="RyV-FL-HnU"/>
+                            </constraints>
+                        </imageView>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="A5a-GO-nYd">
+                            <rect key="frame" x="149" y="195.5" width="21" height="20"/>
+                            <color key="tintColor" red="0.32715490460000002" green="0.70065206290000004" blue="0.071302495899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="A5a-GO-nYd" secondAttribute="height" multiplier="1:1" id="3PG-L8-ihZ"/>
+                                <constraint firstAttribute="width" constant="21" id="VHd-or-4UD"/>
+                                <constraint firstAttribute="height" constant="21" id="urI-po-dQR"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="how-MS-pTX" firstAttribute="centerX" secondItem="z6R-To-AKs" secondAttribute="centerX" id="5G3-cU-iSq"/>
+                        <constraint firstAttribute="width" constant="180" id="Mdf-yT-8Q8"/>
+                        <constraint firstAttribute="trailing" secondItem="A5a-GO-nYd" secondAttribute="trailing" constant="10" id="agp-Ez-GWO"/>
+                        <constraint firstAttribute="bottom" secondItem="A5a-GO-nYd" secondAttribute="bottom" constant="10" id="dR1-l4-m9L"/>
+                        <constraint firstAttribute="width" secondItem="z6R-To-AKs" secondAttribute="height" multiplier="90:113" id="epK-4e-YCv"/>
+                        <constraint firstItem="how-MS-pTX" firstAttribute="centerY" secondItem="z6R-To-AKs" secondAttribute="centerY" id="hgR-fb-vEx"/>
+                        <constraint firstAttribute="height" constant="226" id="hs6-Vv-WpY"/>
+                        <constraint firstItem="how-MS-pTX" firstAttribute="height" secondItem="z6R-To-AKs" secondAttribute="height" id="oyH-51-odu"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="te3-bf-blB">
+                    <rect key="frame" x="59" y="508" width="257" height="45"/>
+                    <color key="backgroundColor" name="ProfuturoDarkishBlue"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="Jcr-3X-isX"/>
+                        <constraint firstAttribute="width" constant="257" id="WyF-0k-6R4"/>
+                        <constraint firstAttribute="width" secondItem="te3-bf-blB" secondAttribute="height" multiplier="257:45" id="iz9-pJ-ZKg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="16"/>
+                    <state key="normal" title="Tomar foto"/>
+                    <connections>
+                        <action selector="continueButton:" destination="-1" eventType="touchUpInside" id="tTe-Jw-UPK"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56H-2s-S1p">
+                    <rect key="frame" x="105.5" y="428" width="164" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="85z-iT-U6h"/>
+                        <constraint firstAttribute="width" constant="164" id="bgH-kQ-YxF"/>
+                        <constraint firstAttribute="width" secondItem="56H-2s-S1p" secondAttribute="height" multiplier="41:5" id="nwt-gQ-BTx"/>
+                    </constraints>
+                    <state key="normal">
+                        <attributedString key="attributedTitle">
+                            <fragment content="Reemplazar foto">
+                                <attributes>
+                                    <color key="NSColor" red="0.0039215686274509803" green="0.50588235294117645" blue="0.76862745098039209" alpha="1" colorSpace="calibratedRGB"/>
+                                    <font key="NSFont" metaFont="system" size="14"/>
+                                    <font key="NSOriginalFont" metaFont="system" size="14"/>
+                                    <integer key="NSUnderline" value="1"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                    </state>
+                    <connections>
+                        <action selector="takePhotoButtonTapped:" destination="-1" eventType="touchUpInside" id="Uem-rr-S2T"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="ygX-XV-2l2"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="te3-bf-blB" firstAttribute="top" relation="greaterThanOrEqual" secondItem="56H-2s-S1p" secondAttribute="bottom" constant="60" id="2Rj-KK-WXo"/>
+                <constraint firstItem="ygX-XV-2l2" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="te3-bf-blB" secondAttribute="bottom" constant="23" id="EFz-fR-MJY"/>
+                <constraint firstItem="te3-bf-blB" firstAttribute="top" secondItem="56H-2s-S1p" secondAttribute="bottom" priority="250" constant="60" id="QHJ-he-6DN"/>
+                <constraint firstItem="C9D-sJ-9rA" firstAttribute="centerX" secondItem="ygX-XV-2l2" secondAttribute="centerX" id="TO0-Sz-F8u"/>
+                <constraint firstItem="z6R-To-AKs" firstAttribute="top" secondItem="C9D-sJ-9rA" secondAttribute="bottom" constant="70" id="bDd-RZ-Kz3"/>
+                <constraint firstItem="te3-bf-blB" firstAttribute="centerX" secondItem="RoT-k4-xOV" secondAttribute="centerX" id="i59-a8-pXO"/>
+                <constraint firstItem="C9D-sJ-9rA" firstAttribute="top" secondItem="ygX-XV-2l2" secondAttribute="top" constant="64" id="mek-Kv-ecy"/>
+                <constraint firstItem="56H-2s-S1p" firstAttribute="top" secondItem="z6R-To-AKs" secondAttribute="bottom" constant="20" id="qbU-K4-PG9"/>
+                <constraint firstItem="z6R-To-AKs" firstAttribute="centerX" secondItem="ygX-XV-2l2" secondAttribute="centerX" id="rOw-9O-XUF"/>
+                <constraint firstItem="56H-2s-S1p" firstAttribute="centerX" secondItem="RoT-k4-xOV" secondAttribute="centerX" id="toR-b0-xFu"/>
+            </constraints>
+            <point key="canvasLocation" x="160.86956521739131" y="-249.10714285714283"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="icn_selfie" width="274.5" height="337.5"/>
+        <namedColor name="ProfuturoDarkishBlue">
+            <color red="0.0" green="0.29399999976158142" blue="0.55299997329711914" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
